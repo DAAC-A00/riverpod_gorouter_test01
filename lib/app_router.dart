@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'home_screen.dart';
+import 'counter_screen.dart';
 import 'main_page.dart';
 import 'detail_page.dart';
 
-final GoRouter goRouter = GoRouter(
+final GoRouter appRouter = GoRouter(
   initialLocation: '/',
   routes: [
     GoRoute(
@@ -21,7 +21,7 @@ final GoRouter goRouter = GoRouter(
     GoRoute(
       path: '/home',
       builder: (BuildContext context, GoRouterState state) =>
-          const HomeScreen(),
+          const CounterScreen(),
     ),
   ],
 );

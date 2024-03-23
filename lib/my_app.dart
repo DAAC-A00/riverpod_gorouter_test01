@@ -7,12 +7,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routeInformationParser: goRouter
+      routeInformationParser: appRouter
           .routeInformationParser, // GoRouter의 routeInformationParser를 사용합니다.
       routeInformationProvider:
-          goRouter.routeInformationProvider, // 라우트 상태를 전달해주는 함수
+          appRouter.routeInformationProvider, // 라우트 상태를 전달해주는 함수
       routerDelegate:
-          goRouter.routerDelegate, // GoRouter의 routerDelegate를 사용합니다.
+          appRouter.routerDelegate, // GoRouter의 routerDelegate를 사용합니다.
       title: 'GoRouter Example',
     );
   }

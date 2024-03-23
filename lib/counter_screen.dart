@@ -1,12 +1,11 @@
-// home_screen.dart
+// counter_screen.dart
 
-// home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'counter_provider.dart';
 
-class HomeScreen extends ConsumerWidget {
-  const HomeScreen({super.key});
+class CounterScreen extends ConsumerWidget {
+  const CounterScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
