@@ -1,16 +1,16 @@
-// home_route_error_screen.dart
+// route_error_screen.dart
 
 import 'package:flutter/material.dart';
 
-class HomeRouteErrorScreen extends StatefulWidget {
+class RouteErrorScreen extends StatefulWidget {
   final String errorMsg;
-  const HomeRouteErrorScreen({required this.errorMsg, super.key});
+  const RouteErrorScreen({required this.errorMsg, super.key});
 
   @override
-  State<HomeRouteErrorScreen> createState() => _HomeRouteErrorScreenState();
+  State<RouteErrorScreen> createState() => _RouteErrorScreenState();
 }
 
-class _HomeRouteErrorScreenState extends State<HomeRouteErrorScreen> {
+class _RouteErrorScreenState extends State<RouteErrorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
