@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'counter_screen.dart';
-import 'main_page.dart';
 import 'detail_page.dart';
+import 'main_page.dart';
+import 'route_error_screen.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
@@ -24,4 +25,8 @@ final GoRouter appRouter = GoRouter(
           const CounterScreen(),
     ),
   ],
+  errorBuilder: (context, state) => RouteErrorScreen(
+    errorMsg: state.error.toString(),
+    key: state.pageKey,
+  ),
 );
