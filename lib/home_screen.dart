@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
               child: const Text('Go to Detail Page'),
             ),
             ElevatedButton(
-              onPressed: () => context.go('/home'),
+              onPressed: () => context.go('/counter'),
               child: const Text('Go to Counter Screen'),
             ),
           ],

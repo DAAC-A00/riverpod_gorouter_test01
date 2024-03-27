@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'counter_provider.dart';
 
 class CounterScreen extends ConsumerWidget {
@@ -12,10 +13,23 @@ class CounterScreen extends ConsumerWidget {
     final count = ref.watch(counterProvider);
 
     return Scaffold(
-        appBar: AppBar(title: const Text('Home Screen')),
+        appBar: AppBar(title: const Text('Counter Screen')),
         body: Center(
-          child: Text('Counter: $count',
-              style: Theme.of(context).textTheme.headlineMedium),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () => context.go('/detail'),
+                child: const Text('Go to Detail Page'),
+              ),
+              ElevatedButton(
+                onPressed: () => context.go('/counter'),
+                child: const Text('Go to Counter Screen'),
+              ),
+              Text('Counter: $count',
+                  style: Theme.of(context).textTheme.headlineMedium),
+            ],
+          ),
         ),
         floatingActionButton: Column(
           mainAxisAlignment: MainAxisAlignment.end,
