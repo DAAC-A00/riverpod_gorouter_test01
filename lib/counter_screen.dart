@@ -12,16 +12,20 @@ class CounterScreen extends ConsumerWidget {
     final count = ref.watch(counterProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Screen')),
-      body: Center(
-        child: Text('Counter: $count',
-            style: Theme.of(context).textTheme.headlineMedium),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.read(counterProvider.notifier).state++,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
+        appBar: AppBar(title: const Text('Home Screen')),
+        body: Center(
+          child: Text('Counter: $count',
+              style: Theme.of(context).textTheme.headlineMedium),
+        ),
+        floatingActionButton: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FloatingActionButton(
+              onPressed: () => ref.read(counterProvider.notifier).state++,
+              tooltip: 'Increment',
+              child: const Icon(Icons.add),
+            ),
+          ],
+        ));
   }
 }

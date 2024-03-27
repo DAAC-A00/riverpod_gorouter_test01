@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'counter_screen.dart';
-import 'detail_page.dart';
-import 'main_page.dart';
+import 'detail_screen.dart';
+import 'main_screen.dart';
 import 'route_error_screen.dart';
 
 final GoRouter appRouter = GoRouter(
@@ -12,12 +12,13 @@ final GoRouter appRouter = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (BuildContext context, GoRouterState state) => const MainPage(),
+      builder: (BuildContext context, GoRouterState state) =>
+          const MainScreen(),
     ),
     GoRoute(
       path: '/detail',
       builder: (BuildContext context, GoRouterState state) =>
-          const DetailPage(),
+          const DetailScreen(),
     ),
     GoRoute(
       path: '/home',

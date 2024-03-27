@@ -1,26 +1,26 @@
-// main_page.dart
+// main_screen.dart
 
 import 'package:flutter/material.dart';
 
 import 'counter_screen.dart';
-import 'detail_page.dart';
+import 'detail_screen.dart';
 import 'home_screen.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainScreenState extends State<MainScreen> {
   int _selectedTabIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     final bottomTabList = <Widget>[
       const HomeScreen(),
-      const DetailPage(),
+      const DetailScreen(),
       const CounterScreen(),
     ];
 

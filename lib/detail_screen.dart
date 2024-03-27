@@ -1,9 +1,9 @@
-// detail_page.dart
+// detail_screen.dart
 
 import 'package:flutter/material.dart';
 
-class DetailPage extends StatelessWidget {
-  const DetailPage({super.key});
+class DetailScreen extends StatelessWidget {
+  const DetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
