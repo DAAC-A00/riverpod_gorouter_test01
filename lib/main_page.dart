@@ -1,11 +1,10 @@
 // main_page.dart
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import 'counter_screen.dart';
 import 'detail_page.dart';
-import 'home_screen.dart'; // HomeScreen을 import합니다.
+import 'home_screen.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -19,14 +18,14 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    final tabs = [
-      const HomeScreen(), // 첫 번째 탭에 HomeScreen을 추가합니다.
+    final bottomTabList = <Widget>[
+      const HomeScreen(),
       const DetailPage(),
       const CounterScreen(),
-    ]; // 탭에 따른 화면을 여기에 추가합니다.
+    ];
 
     return Scaffold(
-      body: tabs[_selectedTabIndex], // 선택된 탭 인덱스에 따라 화면을 표시합니다.
+      body: bottomTabList[_selectedTabIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTabIndex,
         onTap: (index) {
@@ -34,7 +33,7 @@ class _MainPageState extends State<MainPage> {
             _selectedTabIndex = index;
           });
         },
-        items: const [
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home', // 첫 번째 탭의 라벨을 'Home'으로 변경합니다.
