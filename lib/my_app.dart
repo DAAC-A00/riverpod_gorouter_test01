@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'app_router.dart'; // go_router_provider.dart 파일을 임포트 해야 합니다.
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp.router(
       routeInformationParser: appRouter
           .routeInformationParser, // GoRouter의 routeInformationParser를 사용합니다.
